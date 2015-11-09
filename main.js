@@ -31,7 +31,7 @@ http.createServer(function (req, res) {
       // HTMLを返します、と宣言します
       res.writeHead(200, {'Content-Type': 'text/html'});
       // lightsensor.htmlというファイルを読み込みます
-      var lightSensorPage = fs.readFileSync('/node_app_slot/lightsensor.html');
+      var lightSensorPage = fs.readFileSync('./lightsensor.html');
       // 読み込んだファイルの内容をそのまま返します
       res.end(lightSensorPage);
     // こちらはURLにmessageという文字があるかどうかチェックしています
@@ -60,6 +60,6 @@ http.createServer(function (req, res) {
     // その他、JavaScript SDKを指定された場合
     } else if (req.url.indexOf('ncmb.min.js') != -1) {
       // Webブラウザ用のJavaScript SDKを返します
-      res.end(fs.readFileSync("/node_app_slot/node_modules/ncmb/ncmb.min.js"));
+      res.end(fs.readFileSync("./node_modules/ncmb/ncmb.min.js"));
     }
 }).listen(1337);
