@@ -12,8 +12,8 @@ var url = require('url');
 // mBaaSを扱う準備です。
 var NCMB = require('ncmb');
 
-var application_key = "アプリケーションキーに書き換えてください",
-    client_key = "クライアントキーに書き換えてください";
+var application_key = "21404b8a6513de18a4de7906de121d390ffbc8e1f5f95d48d08be2b1b6e74f98",
+    client_key = "92eb83e40559574935e8175c3dcaa56ab49bb8147bc904626a484ef1bc28c1f3";
 // アプリケーションキーとクライアントキーで初期化します
 var ncmb = new NCMB(application_key, client_key);
 // 再度データストアでMessageクラスを準備します。データベースのテーブル相当です。
